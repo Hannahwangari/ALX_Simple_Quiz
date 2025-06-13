@@ -1,19 +1,12 @@
-// Step 1: Define the function
 function checkAnswer() {
-    // Step 2: Define the correct answer
-    const correctAnswer = "4";
+    const correctAnswer = "4"; // Step 1: correct answer
 
-    // Step 3: Get the user's selected answer
-    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    const selectedOption = document.querySelector('input[name="quiz"]:checked'); // Step 2: user answer
+    const feedback = document.getElementById("feedback"); // feedback element
 
-    // Get the feedback element
-    const feedback = document.getElementById('feedback');
-
-    // Step 4: Check if the user selected an option
     if (selectedOption) {
         const userAnswer = selectedOption.value;
 
-        // Step 5: Compare user's answer to the correct answer
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! Well done.";
         } else {
@@ -24,6 +17,5 @@ function checkAnswer() {
     }
 }
 
-// Step 6: Add event listener to the submit button
-const submitButton = document.getElementById('submit-answer');
-submitButton.addEventListener('click', checkAnswer);
+const submitButton = document.getElementById("submit-answer"); // Step 3: event listener
+submitButton.addEventListener("click", checkAnswer);
